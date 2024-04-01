@@ -11,22 +11,37 @@ class BinarySearchTree{
         this.root
     }
 
-    insert(){
+    insert(value){
         const node = new Node(value)
 
         if(!this.root){
             this.root = node
         }else{
-            insertNode(this.root,value)
+            this.insertNode(this.root,value)
         }
     }
     insertNode(root,value){
         if(root.value > value){
             if(!root.left){
-               new Node(value)
+             root.left =   new Node(value)
             }else{
-                insertNod
+                this.insertNode(root.left,value)
+            }
+        }else{
+            if(!root.right){
+               root.right =  new Node(value)
+            }else{
+                this.insertNode(root.right,value)
             }
         }
     }
+
 }
+
+
+
+const bst = new BinarySearchTree();
+bst.insert(3);
+bst.insert(1);
+bst.insert(5);
+console.log(bst);
