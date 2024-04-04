@@ -16,16 +16,16 @@ class Graph{
 
         this.adjacencylist[vertex1].push(vertex2)
         this.adjacencylist[vertex2].push(vertex1)
-    }
-     
-    bfs(startingVertex){
+    }  
+
+    dfs(startingVertex){
         const visited ={}
         const result =[]
         const queue = [startingVertex]
         visited[startingVertex]
 
         while(queue.length >0){
-            const currentVertex = queue.shift()
+            const currentVertex = queue.pop()
             result.push(currentVertex)
             this.adjacencylist[currentVertex].forEach(element => {
                   if(!visited[element]){

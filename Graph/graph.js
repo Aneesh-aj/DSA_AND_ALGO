@@ -71,6 +71,6 @@ class Graph {
   graph.addEdge("B", "D");
   graph.addEdge("C", "E");
   
-  console.log(graph.depthFirstTraversal("A")); // Output: [ 'A', 'B', 'D', 'C', 'E' ]
-  console.log(graph.breadthFirstTraversal("A")); // Output: [ 'A', 'B', 'C', 'D', 'E' ]
+  console.log(graph.depthFirstTraversal("A"));
+  console.log(graph.breadthFirstTraversal("A"));
   
