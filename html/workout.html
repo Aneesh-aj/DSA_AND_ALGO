@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .square {
+            background-color: white;
+            width: 300px;
+            height: 180px;
+            border: 1px solid;
+            cursor: pointer; /* Add cursor pointer on hover */
+        }
+    </style>
+</head>
+<body>
+    <div >
+        <div class="square" onclick="changeColour(this)">square 1</div>
+        <div class="square" onclick="changeColour(this)">square 2</div>
+        <div class="square" onclick="changeColour(this)">square 3</div>
+        <div class="square" onclick="changeColour(this)">square 4</div>
+    </div>
+
+    <script>
+        function changeColour(element) {
+            console.log("entering", element.id);
+            if (element.style.backgroundColor === "white" || element.style.backgroundColor === "") {
+                element.style.backgroundColor = "green";
+            } else {
+                element.style.backgroundColor = "white";
+            }
+        }
+    </script>
+</body>
+</html>
